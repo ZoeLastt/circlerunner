@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.54.0/dist/phaser.js"></script>
+    <script src="game_scene.js"></script>
+    <script>
+        var config = {
+            type: Phaser.AUTO,
+            width: 600,
+            height: 600,
+            autoCenter: Phaser.Scale.CENTER_BOTH,
+            physics: {
+            default: 'arcade', 
+            arcade: {
+            gravity: { y: 0 },
+            debug: false
+            }
+            },
+            scene: [game_scene]
+        };
+
+        var game = new Phaser.Game(config);
+
+        var player;
+        var score; var score_text;
+        var enemy;
+        var keys;
+        var timer;
+    </script>
+    <style>
+        body{
+            background-color: #FDF8E2;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
